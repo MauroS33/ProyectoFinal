@@ -1,29 +1,40 @@
-# Fase 1: Construcción
-FROM node:18 AS builder
+# Etapa 1: Construcción
+FROM node:20-alpine AS builder
 
+# Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
+
+# Copiar los archivos necesarios para instalar dependencias
 COPY package*.json ./
-RUN npm ci # Instala dependencias de manera determinística
-COPY tsconfig.json ./
-COPY src ./src
 
-# Compila el proyecto usando NestJS CLI
-RUN npx nest build
+# Instalar dependencias
+RUN npm install
 
-# Eliminar dependencias de desarrollo
+# Copiar TODO el código fuente
+COPY . .
+
+# Compilar el proyecto usando NestJS CLI
+RUN npm run build
+
+# Eliminar dependencias de desarrollo para reducir el tamaño de la imagen
 RUN npm prune --production && npm cache clean --force
 
-# Fase 2: Imagen Final
-FROM node:18-alpine
 
+# Etapa 2: Ejecución
+FROM node:20-alpine
+
+# Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copiar solo las dependencias de producción
+# Copiar solo los archivos necesarios desde la etapa de construcción
 COPY --from=builder /app/package*.json ./
-RUN npm prune --production && npm cache clean --force
-
-# Copiar el código compilado
 COPY --from=builder /app/dist ./dist
 
+# Instalar solo las dependencias de producción
+RUN npm ci --only=production && npm cache clean --force
+
+# Exponer el puerto donde corre la aplicación
 EXPOSE 3000
-CMD ["node", "dist/main.js"]
+
+# Comando para iniciar la aplicación
+CMD ["node", "dist/main"]
