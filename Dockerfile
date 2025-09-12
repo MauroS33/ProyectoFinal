@@ -12,6 +12,7 @@ RUN npm install
 
 # Copiar TODO el código fuente
 COPY ./src ./src
+COPY tsconfig*.json .
 
 # Compilar el proyecto usando NestJS CLI
 RUN npm run build
