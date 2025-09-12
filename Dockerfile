@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copiar TODO el código fuente
-COPY . .
+COPY ./src ./src
 
 # Compilar el proyecto usando NestJS CLI
 RUN npm run build

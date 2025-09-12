@@ -23,8 +23,11 @@
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^9.9.0",
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/core": "^11.0.1",
     "@nestjs/jwt": "^11.0.0",
     "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-express": "^11.0.1",
     "@nestjs/swagger": "^11.2.0",
     "@sentry/node": "^10.8.0",
     "@sentry/tracing": "^7.120.4",
@@ -34,39 +37,39 @@
     "express": "^4.18.2",
     "express-compression": "^1.0.2",
     "express-session": "^1.18.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^6.13.8",
     "multer": "^1.4.5-lts.1",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1",
-    "@nestjs/common": "^11.0.1",
-    "@nestjs/core": "^11.0.1",
-    "@nestjs/platform-express": "^11.0.1",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
-    "@types/mongoose": "^5.11.96",
-    "babel-jest": "^30.1.2",
-    "chai": "^4.3.7",
-    "mocha": "^10.1.0",
-    "node-notifier": "^10.0.1",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.1",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__preset-env": "^7.10.0",
+    "@types/babel__traverse": "^7.28.0",
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
+    "@types/mongoose": "^5.11.96",
     "@types/node": "^22.10.7",
     "@types/supertest": "^6.0.2",
+    "babel-jest": "^30.1.2",
+    "chai": "^4.3.7",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
     "globals": "^16.0.0",
-    "jest": "^30.0.0",
+    "jest": "^30.1.3",
+    "mocha": "^10.1.0",
+    "node-notifier": "^10.0.1",
     "prettier": "^3.4.2",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
@@ -74,10 +77,10 @@
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.7.3",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.20.0"
   },
-    "jest": {
+  "jest": {
     "moduleFileExtensions": [
       "js",
       "json",
@@ -94,5 +97,4 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }
-
 }

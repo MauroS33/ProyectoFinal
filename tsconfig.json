@@ -24,6 +24,6 @@
     "rootDir": "./src",
     "strict": true,
     },
-  "include": ["src/**/*", "proyecto-final/src/app.controller.spec.ts", "proyecto-final/src/app.controller.ts", "proyecto-final/src/app.module.ts", "proyecto-final/src/app.service.ts", "proyecto-final/src/main.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
