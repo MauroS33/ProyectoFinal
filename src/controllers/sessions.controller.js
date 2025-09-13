@@ -1,7 +1,7 @@
-import { usersService } from "../services/index.ts";
+import { usersService } from "../services/index.js";
 import { createHash, passwordValidation } from "../utils/index.js";
 import jwt from 'jsonwebtoken';
-import UserDTO from '../dto/User.dto.ts';
+import UserDTO from '../dto/User.dto.js';
 
 const register = async (req, res) => {
     try {
