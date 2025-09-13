@@ -29,6 +29,8 @@ Supertest: Biblioteca utilizada para realizar pruebas de endpoints HTTP en el ba
 Docker Compose: Utilizado para orquestar múltiples servicios (por ejemplo, backend y base de datos) en un entorno local.
 CI/CD: Configuración de pipelines de integración continua y despliegue continuo.
 
-5. Enlace a la imagen en Docker Hub: https://hub.docker.com/repository/docker/mau33/proyectofinal:latest
+5. Enlace a la imagen en Docker Hub: https://hub.docker.com/repository/docker/mau33/proyectofinal
+Acceso a la Imagen en Docker Hub
+La imagen de este proyecto está disponible en Docker Hub. Puedes descargarla y ejecutarla directamente.
 
 Tuve varios problemas tanto personales como tecnicos, espero que cumpla con lo pedido.
